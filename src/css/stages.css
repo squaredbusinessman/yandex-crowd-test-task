@@ -1,0 +1,286 @@
+.stages {
+  margin-bottom: 195px;
+}
+
+.stages__header-wrapper {
+  max-width: 806px;
+  margin-bottom: 54px;
+}
+
+.stages__header {
+  display: inline-block;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 120%;
+  color: #313131;
+  text-transform: uppercase;
+}
+
+.stages__subheader {
+  margin-left: 5px;
+  display: inline-block;
+  max-width: 295px;
+  font-family: "Golos Text", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+  color: rgba(48, 87, 162, 1);
+  text-transform: none;
+}
+
+.stages__item {
+  font-family: "Golos Text", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+  background-image: url("../img/stages-card-background.png");
+  background-repeat: repeat;
+  background-size: 100%;
+}
+
+/* stages__grid */
+
+.stages__grid {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  grid-auto-flow: dense;
+  justify-content: center;
+}
+
+.stages__grid:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -5%;
+  width: 401px;
+  height: 235px;
+  background-image: url("../img/stages-airplane-img.png");
+}
+
+.stages__grid-item {
+  width: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 21px;
+}
+
+.stages__grid-item:nth-child(3) {
+  grid-row: span 2;
+}
+
+.stages__grid-item:nth-child(7) {
+  grid-column: span 2;
+}
+
+.stages__grid-item:nth-child(7) p {
+  max-width: 446px;
+}
+
+.stages__number {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  flex-shrink: 0;
+
+  font-family: "Golos Text", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.stages__slider {
+  display: none;
+}
+
+.stages__bullets-list {
+  display: none;
+}
+
+.stages__controls {
+  display: none;
+}
+
+@media (max-width: 1255px) {
+  .stages__grid:after {
+    bottom: 25%;
+    right: 0;
+    width: 335px;
+    height: 182px;
+    background-image: url("../img/stages-airplane-img@mob.png");
+  }
+}
+
+@media (max-width: 1120px) {
+  .stages__grid:after {
+    bottom: 29%;
+    right: -5%;
+    width: 300px;
+    height: 150px;
+    background-image: url("../img/stages-airplane-img@mob.png");
+    background-size: contain;
+  }
+}
+
+@media (max-width: 995px) {
+  .stages__grid {
+    margin-top: 150px;
+  }
+
+  .stages__grid:after {
+    top: -130px;
+    right: calc(50% - 190px);
+  }
+
+  .stages__grid-item:nth-child(3) {
+    grid-row: span 1;
+  }
+}
+
+/* stages__slider */
+
+@media (max-width: 768px) {
+  .stages {
+    margin-bottom: 128px;
+  }
+
+  .stages__header {
+    display: block;
+    font-size: 36px;
+    line-height: 110%;
+  }
+
+  .stages__subheader {
+    display: block;
+    font-size: 18px;
+    margin-top: 14px;
+    margin-left: 0;
+  }
+
+  .stages__grid {
+    display: none;
+  }
+
+  .stages__item {
+    font-size: 18px;
+    background-image: url("../img/stages-card-background@mob.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .stages__slider {
+    display: block;
+    position: relative;
+    margin-top: 148px;
+  }
+
+  .stages__slider:before {
+    content: "";
+    position: absolute;
+    top: -140px;
+    left: calc(50% - 182px);
+    width: 335px;
+    height: 182px;
+    background-image: url("../img/stages-airplane-img@mob.png");
+  }
+
+  .stages__slide {
+    display: none;
+    width: 100%;
+    padding-top: 43px;
+    margin-bottom: 22px;
+    min-height: 257px;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+
+  .slide__wrapper {
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 20px 0 20px;
+  }
+
+  .stages__slide.active {
+    display: flex;
+  }
+
+  .stages__controls {
+    margin: 0 auto;
+    display: flex;
+    max-width: 178px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .stages__control {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #313131;
+    border: none;
+    border-radius: 50%;
+  }
+
+  .stages__control:hover {
+    background-color: rgba(251, 206, 81, 1);
+  }
+
+  .stages__control:disabled {
+    background-color: rgba(214, 214, 214, 1);
+  }
+
+  .stages__control-prev i,
+  .stages__control-next i {
+    position: absolute;
+    width: 12px;
+    height: 20px;
+    top: calc(50% - 10px);
+    background-image: url("../img/arrow-desktop.png");
+    object-fit: cover;
+  }
+
+  .stages__control-prev i {
+    left: calc(50% - 9px);
+    transform: rotate(180deg);
+  }
+
+  .stages__control-next i {
+    right: calc(50% - 9px);
+    transform: rotate(0deg);
+  }
+
+  .stages__bullets-list {
+    display: flex;
+    column-gap: 6px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .stages__bullets-item {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+  }
+
+  .stages__bullets-item.active {
+    background-color: #313131;
+  }
+}
+
