@@ -144,7 +144,9 @@
   .session__prices-item:nth-child(4) {
     flex-direction: row;
     align-items: baseline;
-    column-gap: 0;
+    p {
+      width: auto;
+    }
   }
 
   .session__prices-name {
